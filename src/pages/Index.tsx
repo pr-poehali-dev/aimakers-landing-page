@@ -51,22 +51,21 @@ const Index = () => {
             Технический прокси-сервис для удобного доступа к OpenAI API через собственный интерфейс
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 text-white px-8 py-4 text-lg rounded-xl font-medium"
-              >
-                <Icon name="ArrowRight" className="mr-2" />
-                Получить API ключ
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-2 border-gray-700 text-foreground hover:bg-secondary px-8 py-4 text-lg rounded-xl font-medium"
-              >
-                <Icon name="FileText" className="mr-2" />
-                Документация
-              </Button>
-            </div>
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 text-white px-8 py-4 text-lg rounded-xl font-medium"
+            >
+              <Icon name="ArrowRight" className="mr-2" />
+              Получить API ключ
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-2 border-gray-700 text-foreground hover:bg-secondary px-8 py-4 text-lg rounded-xl font-medium"
+            >
+              <Icon name="FileText" className="mr-2" />
+              Документация
+            </Button>
           </div>
         </div>
       </section>
