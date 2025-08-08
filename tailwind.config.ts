@@ -23,9 +23,8 @@ export default {
 				heading: ['Roboto', 'system-ui', 'sans-serif']
 			},
 			colors: {
-				blue: 'hsl(var(--blue))',
-				purple: 'hsl(var(--purple))',
-				'purple-light': 'hsl(var(--purple-light))',
+				accent: 'hsl(var(--accent))',
+				'accent-light': 'hsl(var(--accent-light))',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
