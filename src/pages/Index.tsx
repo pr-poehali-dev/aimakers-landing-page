@@ -4,25 +4,25 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
-      <header className="w-full px-6 py-6 border-b border-gray-100">
+      <header className="w-full px-6 py-4 border-b border-gray-800/50 backdrop-blur-sm bg-background/80 sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-black rounded-sm flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
               <Icon name="Cpu" size={18} className="text-white" />
             </div>
-            <h1 className="text-2xl font-light text-black tracking-wide">
+            <h1 className="text-2xl font-semibold text-foreground">
               AIMakers API
             </h1>
           </div>
           <div className="flex items-center space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-black transition-colors font-light">Возможности</a>
-            <a href="#how-it-works" className="text-gray-600 hover:text-black transition-colors font-light">Как работает</a>
-            <a href="#contact" className="text-gray-600 hover:text-black transition-colors font-light">Контакты</a>
+            <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Возможности</a>
+            <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">Как работает</a>
+            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Контакты</a>
             <Button 
               asChild 
-              className="bg-black hover:bg-gray-800 text-white font-light px-6 py-2 rounded-sm"
+              className="bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 text-white font-medium px-6 py-2 rounded-xl"
             >
               <a href="https://digital.tab-is.com/" target="_blank" rel="noopener noreferrer">
                 Начать работу
@@ -33,22 +33,27 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative px-6 py-24">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-6xl md:text-8xl font-light mb-8 text-black tracking-tight leading-none animate-fade-in">
+      <section className="relative px-6 py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Упростите доступ
-              <br />
-              <span className="font-normal">к AI моделям</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto font-light leading-relaxed animate-fade-in">
-              Технический прокси-сервис для удобного доступа к OpenAI API
-              <br />через собственный интерфейс
-            </p>
+            </span>
+            <br />
+            <span className="text-foreground">к AI моделям</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in">
+            Технический прокси-сервис для удобного доступа к OpenAI API через собственный интерфейс
+          </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in">
               <Button 
                 size="lg" 
-                className="bg-black hover:bg-gray-800 text-white font-light px-10 py-4 text-lg rounded-sm"
+                className="bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 text-white px-8 py-4 text-lg rounded-xl font-medium"
               >
                 <Icon name="ArrowRight" className="mr-2" />
                 Получить API ключ
@@ -56,7 +61,7 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border border-gray-300 text-gray-700 hover:bg-gray-50 font-light px-10 py-4 text-lg rounded-sm"
+                className="border-2 border-gray-700 text-foreground hover:bg-secondary px-8 py-4 text-lg rounded-xl font-medium"
               >
                 <Icon name="FileText" className="mr-2" />
                 Документация
@@ -67,27 +72,36 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="px-6 py-24 bg-gray-50">
+      <section id="features" className="px-6 py-20 bg-secondary/50">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-light mb-6 text-black tracking-tight">
-              Возможности
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Возможности
+              </span>
             </h2>
-            <p className="text-xl text-gray-500 max-w-2xl mx-auto font-light">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Простой и надежный способ интеграции с моделями OpenAI
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-white border border-gray-200 rounded-sm flex items-center justify-center mx-auto mb-8 group-hover:bg-black group-hover:border-black transition-all duration-300">
-                <Icon name="Key" size={28} className="text-gray-700 group-hover:text-white transition-colors" />
-              </div>
-              <h3 className="text-2xl font-light mb-4 text-black">Простая интеграция</h3>
-              <p className="text-gray-500 font-light leading-relaxed">
-                Получите API ключ и URL — больше ничего не нужно. Никаких сложных настроек.
-              </p>
-            </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-gray-800 bg-card/80 backdrop-blur-sm hover:bg-card transition-all duration-300 group">
+              <CardHeader>
+                <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Icon name="Key" size={24} className="text-white" />
+                </div>
+                <CardTitle className="text-xl text-foreground">Простая интеграция</CardTitle>
+                <CardDescription className="text-muted-foreground">
+                  Получите API ключ и URL - больше ничего не нужно
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Никаких сложных настроек. Просто замените URL в ваших запросах и используйте наш API ключ.
+                </p>
+              </CardContent>
+            </Card>
 
             <div className="text-center group">
               <div className="w-16 h-16 bg-white border border-gray-200 rounded-sm flex items-center justify-center mx-auto mb-8 group-hover:bg-black group-hover:border-black transition-all duration-300">
