@@ -50,7 +50,7 @@ const Index = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in">
             Технический прокси-сервис для удобного доступа к OpenAI API через собственный интерфейс
           </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 text-white px-8 py-4 text-lg rounded-xl font-medium"
